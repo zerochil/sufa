@@ -1,0 +1,26 @@
+.collapssable_buttons>._selectors input{ display: none; }
+
+.collapssable_buttons {
+	display:flex;
+	flex-direction: column;
+}
+.collapssable_buttons>._selectors {
+	display: flex;
+	gap: 3ch;
+	align-items: center;
+}
+.collapssable_buttons>._selectors label{
+	border-radius: 1ch;
+	background-color: #FFFFFF;
+	box-shadow: 0 .2ch .8ch rgba(116, 116, 116, 0.25);
+	cursor: pointer;
+	transition: color var(--time-transition) ease;
+	padding: 1ch 2ch;
+	text-transform: capitalize;
+	transition: box-shadow .3s ease-out;
+}
+.collapssable_buttons>._selectors label:has(input:checked){
+}
+.collapssable_buttons>._selectors label:hover{
+	box-shadow: 0 10px 15px -20px var(--color-dark);
+}

@@ -1,0 +1,50 @@
+@media screen and (max-width: 899px) {
+	/* reset */
+	.navigation_bar>._scrollables{
+		display:none;
+		border-top: .5px dotted rgba(0,0,0,.1);
+	}
+	.navigation_bar._collapsed>._scrollables{ display:flex; }
+	.navigation_bar { /* to position svg */
+		display: flex;
+		justify-content: flex-end;
+	}
+	.collapse_buttons {
+		display: flex;
+		align-items: center;
+	}
+		.collapse_buttons > svg{
+			width: 1rem;
+			height: 1rem;
+			cursor: pointer;
+			display:block;
+			opacity: 1;
+			transition: opacity, width, .4s;
+		}
+		.collapse_buttons > ._open{
+			width: 1.4rem;
+			height: 1.4rem;
+		}
+    ._collapsed>.collapse_buttons>._open,
+    .navigation_bar:not(._collapsed)>.collapse_buttons>._close {
+			opacity: 0; width: 0;
+    }
+
+
+	._scrollables{
+		position: absolute;
+		top:var(--bar-height);
+		left:0;
+		right:0;
+	}
+		._scrollables > ul  {
+			background-color: var(--color-background);
+			display: flex;
+			overflow-x: scroll;
+			justify-content: initial !important; /* needed; allows for scrolling */
+			width:100%;
+		}
+			._scrollables > ul  > li{
+				flex-grow:1;
+			}
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Edit listing</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<meta name="author" content="" />
+<link rel="shortcut icon" href="https://magency.sufa.ma/files/minteragencelogo (2).png" type="image/png" />
+<link rel="canonical" href="https://magency.sufa.ma/index.php/frontend/editproperty/en" />
+<meta property="og:site_name" content="Minteragence" />
+<meta property="og:title" content="Edit listing" />
+<meta property="og:url" content="https://magency.sufa.ma/index.php/frontend/editproperty/en" />
+<meta property="og:image" content="https://magency.sufa.ma/files/minteragencelogo (1).png" />
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic%7CRoboto:400,500,700%7CRaleway:400,500,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://magency.sufa.ma/templates/boomerang/assets/cache/42ba4big_css.css" media="all">
+
+<link rel="stylesheet" type="text/css" href="https://magency.sufa.ma/templates/boomerang/assets/css/styles_violet.css" media="screen" id="wpStylesheet"><link rel="stylesheet" type="text/css" href="" media="screen" id="template_style">
+  
+<!--[if lt IE 9]>
+    <link rel="stylesheet" href="https://magency.sufa.ma/templates/boomerang/assets/boomerang/https://magency.sufa.ma/templates/boomerang/assets/sky-forms/css/sky-forms-ie8.css">
+<![endif]-->
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" /><script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script><link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" /><link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" /><script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
+
+ 
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://magency.sufa.ma/templates/boomerang/assets/cache/42ba4big_css2.css" media="all"><script src="https://magency.sufa.ma/templates/boomerang/assets/cache/big_js.js"></script>
+
+
+			<!-- TODO: add these two to head.php  -->
+		<link rel="stylesheet" type="text/css" href="svgs.css">
+
+		<link rel="stylesheet" type="text/css" href="header.css">
+		<link rel="stylesheet" type="text/css" href="header_mobile.css">
+
+		<link rel="stylesheet" type="text/css" href="login_page.css">
+		<link rel="stylesheet" type="text/css" href="groups_page.css">
+
+		<link rel="stylesheet" type="text/css" href="edit_listing.css">
+		<link rel="stylesheet" type="text/css" href="form.css">
+
+		<link rel="stylesheet" type="text/css" href="footer.css">
+		<script src="utils.js" defer></script>
+		<script src="edit_listing.js" defer></script>
+
+	</head>
+	<body class="_body">
+		<header>
+			<!--  TODO: remove aside from PHP -->
+			<!-- TODO: Delete all all the header; keep submit listing + login; but login will be added to navbar    -->
+			<!-- Note: the url here in PHP might be dynamic; don't just copy past  -->
+			<div class="submit_listing_button slide_up_in">
+				<a href="https://magency.sufa.ma/index.php/frontend/myproperties/en">
+					<svg class="svg-icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M511.20898437 709.75390625c-16.96289063 0-30.76171875-13.79882813-30.76171874-30.76171875V223.27929687L427.625 276.1015625c-12.04101563 12.04101563-31.46484375 12.04101563-43.50585938 0-12.04101563-12.04101563-12.04101563-31.46484375 0-43.50585938L489.41210937 127.30273437c12.04101563-12.04101563 31.46484375-12.04101563 43.50585938 1e-8l105.29296875 105.29296875c12.04101563 12.04101563 12.04101563 31.46484375 0 43.50585937-12.04101563 12.04101563-31.46484375 12.04101563-43.50585938 0L541.8828125 223.27929687V678.9921875c0.08789063 17.05078125-13.7109375 30.76171875-30.67382813 30.76171875z"  /><path d="M831.48242188 876.13085938H194.890625c-25.48828125 0-46.14257813-20.7421875-46.14257813-46.14257813V508.04492187c0-25.48828125 20.7421875-46.14257813 46.14257813-46.14257812h148.44726563c19.42382813 0 35.15625 15.73242188 35.15624999 35.15625s-15.73242188 35.15625-35.15625 35.15625H219.06054687v273.60351563H807.3125V532.21484375H680.83789063c-19.42382813 0-35.15625-15.73242188-35.15625001-35.15625s15.73242188-35.15625 35.15625-35.15625h150.55664063c25.48828125 0 46.14257813 20.7421875 46.14257813 46.14257813v321.94335937c0.08789063 25.48828125-20.65429688 46.14257813-46.0546875 46.14257813z m-1e-8-343.91601563z"  /></svg>
+					<span>Submit Listing</span> 
+				</a>
+			</div>
+			<script> // TODO: add to the <head>; async load
+				( () => {
+					const listing_button = document.querySelector(".submit_listing_button");
+					document.addEventListener('scroll', function(e) {
+						if(window.scrollY > 50) {
+							listing_button.classList.add('scrolled');
+						} else {
+							listing_button.classList.remove('scrolled');
+						}
+					});
+				})();
+			</script>
+
+		<!-- MAIN NAV -->
+		<div class="main_navigation_bar">
+				<div class="logo">
+					<!-- TODO: PHP: remove buttons that were here (handle navbar on mobile)  -->
+					<a class="" href="https://magency.sufa.ma/" title="Minteragence">
+						<img src="https://magency.sufa.ma/files/minteragencelogo (1).png" alt="Minteragence">
+					</a>
+				</div>
+
+				<!-- TODO: remove the button that was here that opens the sidebar  -->
+				<!-- TODO: remove JS to handle the click  -->
+
+				<div class="navigation_bar">
+					<div class="collapse_buttons" onclick="this.parentNode.classList.toggle('_collapsed')">
+						<svg class="_open" width="800px" height="800px" viewBox="0 0 24 24" fill="var(--color-dark)" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"/>
+						</svg>
+						<svg class="_close" fill="var(--color-dark)" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+							<g><g><polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 512,452.922 315.076,256"/> </g> </g>
+						</svg>
+					</div>
+					<div class="_scrollables">
+						<ul class="main_nav">
+							<li><a href="https://magency.sufa.ma/index.php/en/1/homepage" >Homepage</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/177/real_estate?search={%22v_search_option_79%22:%22Real%20estate%20-%20%22}" >Real estate</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/169/agents" >Agents</a></li>
+							<li class="active"><a href="https://magency.sufa.ma/index.php/en/182/groups" >Groups</a></li>
+							<li class="nav_trigger">
+								<a href="https://magency.sufa.ma/index.php/en/5/about_us">About us</a>
+								<span onclick="this.parentNode.classList.toggle('triggered'); this.closest('._scrollables').querySelector('.secondary_nav').classList.toggle('_collapsed')">+</span>
+							</li>
+							<li><a href="https://magency.sufa.ma/index.php/en/4/contact" >Contact</a></li>
+						</ul>
+						<ul class="secondary_nav"> <!-- TODO: remove JS that handle this submenu from PHP; -->
+							<li><a href="https://magency.sufa.ma/index.php/en/147/featured" >Featured</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/142/blog_page" >Blog page</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/143/custom_search" >Custom search</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/3/rent" >Rent</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/2/sale" >Sale</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/144/sale_and_rent" >Sale and Rent</a></li>
+							<li><a href="http://www.google.com"  target="_blank">Google link</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/157/articles" >Articles</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/160/showroom" >Showroom</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/161/ask_expert" >Ask Expert</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/173/treefield_sitemap" >Treefield sitemap</a></li>
+							<li><a href="https://magency.sufa.ma/index.php/en/181/demo_maps" >Demo maps</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<a class="_login" href="https://magency.sufa.ma/index.php/frontend/login/en">Login</a>
+
+	<!-- TODO: Why use dropmenu? just a single button to toggle the language as there are only two -->
+			<a href="https://magency.sufa.ma/index.php/fr/182" class="language_selection"><img src="https://magency.sufa.ma/templates/boomerang/assets/img/flags/fr.png" alt="" /></a>
+		</div>
+	</header>
+
+	<!-- MAIN CONTENT -->
+
+	<form class="multi_step_form _form" action="" method="post" accept-charset="utf-8">
+		<div class="form_content slider_container">
+			<fieldset class="_categories slider_child">
+				<legend>Catégorie</legend>
+				<div class="_selectors">
+					<label><input type="radio" name="same" value="vente" />Vente</label>
+					<label><input type="radio" name="same" value="location" />Location</label>
+					<label><input type="radio" name="same" value="vacance" />Vacance</label>
+				</div>
+
+				<div class="_choices side_slide">
+					<div>
+						<label><input type="radio" name="sub_category" value="appartement" /><i class="fa_appartement"></i><span>Appartement</span></label>
+						<label><input type="radio" name="sub_category" value="villa" /><i class="fa_villa"></i><span>Villa</span></label>
+						<label><input type="radio" name="sub_category" value="studio" /><i class="fa_studio"></i><span>Studio</span></label>
+						<label><input type="radio" name="sub_category" value="maison" /><i class="fa_home"></i><span>Maison</span></label>
+						<label><input type="radio" name="sub_category" value="terrain_agricole" /><i class="fa_farming"></i><span>Terrain agricole</span></label>
+						<label><input type="radio" name="sub_category" value="terrain_nu" /><i class="fa_land"></i><span>Terrain nu</span></label>
+						<label><input type="radio" name="sub_category" value="bureau" /><i class="fa_desk"></i><span>Bureau</span></label>
+						<label><input type="radio" name="sub_category" value="local_commercial" /><i class="fa_store"></i><span>Local commercial</span></label>
+						<label><input type="radio" name="sub_category" value="local_industriel" /><i class="fa_industry"></i><span>Local industriel</span></label>
+						<label><input type="radio" name="sub_category" value="entrepot_et_depot" /><i class="fa_warehouse"></i><span>Entrepôt et dépôt</span></label>
+						<label><input type="radio" name="sub_category" value="riad" /><i class="fa_hotel"></i><span>Riad</span></label>
+					</div>
+					<div>
+						<label><input type="radio" name="sub_category" value="appartement" /><i class="fa_appartement"></i><span>Appartement</span></label>
+						<label><input type="radio" name="sub_category" value="villa" /><i class="fa_villa"></i><span>Villa</span></label>
+						<label><input type="radio" name="sub_category" value="studio" /><i class="fa_studio"></i><span>Studio</span></label>
+						<label><input type="radio" name="sub_category" value="maison" /><i class="fa_home"></i><span>Maison</span></label>
+						<label><input type="radio" name="sub_category" value="terrain_nu" /><i class="fa_land"></i><span>Terrain nu</span></label>
+						<label><input type="radio" name="sub_category" value="bureau" /><i class="fa_desk"></i><span>Bureau</span></label>
+						<label><input type="radio" name="sub_category" value="local_commercial" /><i class="fa_store"></i><span>Local commercial</span></label>
+						<label><input type="radio" name="sub_category" value="local_industriel" /><i class="fa_industry"></i><span>Local industriel</span></label>
+						<label><input type="radio" name="sub_category" value="entrepot_et_depot" /><i class="fa_warehouse"></i><span>Entrepôt et dépôt</span></label>
+						<label><input type="radio" name="sub_category" value="chamber" /><i class="fa_door"></i><span>chambre</span></label>
+					</div>
+					<div>
+						<label><input type="radio" name="sub_category" value="appartement" /><i class="fa_appartement"></i><span>Appartement</span></label>
+						<label><input type="radio" name="sub_category" value="chamber" /><i class="fa_door"></i><span>Chambre</span></label>
+						<label><input type="radio" name="sub_category" value="bungalow" /><i class="fa_bungalow"></i><span>Bungalow</span></label>
+						<label><input type="radio" name="sub_category" value="cabnon" /><i class="fa_cabin"></i><span>Cabanon</span></label>
+						<label><input type="radio" name="sub_category" value="chalet" /><i class="fa_chalet"></i><span>Chalet</span></label>
+						<label><input type="radio" name="sub_category" value="villa" /><i class="fa_villa"></i><span>Villa</span></label>
+						<label><input type="radio" name="sub_category" value="riad" /><i class="fa_hotel"></i><span>Riad</span></label>
+					</div>
+				</div>
+			</fieldset>
+				
+			<fieldset class="geo_location slider_child">
+				<input type="text" name="coordinates" class="_coordinates">
+			</fieldset>
+
+			<fieldset class="characteristics slider_child">
+				<legend>Caractéristiques</legend>
+				<div>
+					<label>Pièces<input type="number" min=0 value=1 name="room"></label>
+					<label>Chambres<input type="number" min=0 value=1 name="bedroom"></label>
+					<label>Salles de bain<input type="number" min=0 value=1 name="bathroom"></label>
+					<label>Étage<input type="number" min=0 value=1 name="floor"></label>
+					<label>Nombre d'étages<input type="number" min=0 value=1 name="floor_numbers"></label>
+					<label>Construction année<input type="number" min=0 value=2020 name="construction_year"></label>
+				</div>
+				<legend>Autres caractéristiques</legend>
+				<div>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_snowflake"></i><span>Climatisé</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_tree"></i><span>Jardin</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_pool"></i><span>Piscine</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_parking"></i><span>Parking</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_sofa"></i><span>Meublé</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_terasse"></i><span>Terrasse</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_syndic"></i><span>Syndic</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_cave"></i><span>Cave</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_elevator"></i><span>Ascenseur</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_camera"></i><span>Sécurité</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_balcony"></i><span>Balcon</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_guardian"></i><span>Gardiennage</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_green_spaces"></i><span>Espaces verts</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_automation"></i><span>Domotique</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_sea_view"></i><span>Vue sur mer</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_box"></i><span>Box</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_equipped_kitchen"></i><span>Cuisine équipée</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_soundproof"></i><span>Isolation phonique</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_thermalinsulation"></i><span>Isolation thermique</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_playground"></i><span>Aire de jeux</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_gym"></i><span>Salle de fitness</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_chimney"></i><span>Cheminée</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_sportterrains"></i><span>Terrains de sport</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_library"></i><span>Bibliothèque</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_double_orientation"></i><span>Double orientation</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_intercom"></i><span>Interphone</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_garage"></i><span>Garage</span></label>
+					<label><input type="checkbox" name="other_chars"/><i class="fa_double_glazing"></i><span>Double vitrage</span></label>
+				<div>
+			</fieldset>
+
+			<fieldset class="image_upload slider_child">
+				<input name='images' type="file" multiple accept="image/*">
+			</fieldset>
+
+			<fieldset class="general_info slider_child">
+				<legend>Informations générales</legend>
+				<label><input type="text" name="title" placeholder="Enter this listing title"></label>
+				<div>
+					<label>Superficie<input type="number" data-symbol="m²" min=0 step=10 name="surface_area"></label>
+					<label>Prix<input type="number" data-symbol="DH" min=0 step=10 name="price"></label>
+				</div>
+				<label><textarea name="description" placeholder="Describe this listing..."></textarea></label>
+			</fieldset>
+
+
+			<fieldset class="form_submit slider_child">
+				<!-- TODO: handle failure to submit; other reasons than user input; those should be handled while user is entering the data  -->
+				<div class="slide_up">
+					<div class="submit_uploading">
+						<legend>Uploading</legend>
+						<p>This can take a few minutes</p>
+						<div class="_loader"></div>
+					</div>
+					<div class="submit_success">
+						<i class="successful_submission_icon"></i>
+						<legend>Success</legend>
+						<p>Your form was submitted successfully</p>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</form>
+
+
+            <!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+    <div class="row">
+        
+
+<div class="col-md-4">
+    <div class="col">
+       <h4>Contact us</h4>
+       <ul>
+            <li><b>Minteragence </b>Maroc<br />
+Maarif<br />
+Casablanca<br /></li>
+            <li>Phone: <span id="e819440923" class=""><span class="val_protected_mask">+2xxxxxx</span> <a href="#" class="val_protected_spoiler">unhide</a></span><script>$("#e819440923 .val_protected_spoiler").click(function(e){e.preventDefault();var str = "drx0PgKyNmalT1)kY&OUH4EGnu6eCWQ!$oJ M%XL7p_j5q,bz*V~3Sc28Bh-?f+i9w^AsvD.t@IFR(Z#";var length="dKgKagKyNNmma";var character_un = "+-.,0123456789@() ~!#$%^&*?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz";var r="";for(var e=0;e<length.length;e++)r+=character_un.charAt(str.indexOf(length.charAt(e)));$(this).parent().find(".val_protected_mask").remove();var x = "<span>"+r+"</span>";$(this).parent().prepend(x);$(this).remove();})</script> </li>
+            <li>Fax: <span id="e437966557" class=""><span class="val_protected_mask">+2xxxxxx</span> <a href="#" class="val_protected_spoiler">unhide</a></span><script>$("#e437966557 .val_protected_spoiler").click(function(e){e.preventDefault();var str = "Hil1+&kvWh8*nsORbN~u-tMC)rJ_Xy B!^?d(2LKmP@IxF9p0G34Y67Ujzwqao.g$T5fec#ZVE%D,QAS";var length="Hk&k8&kvWWhh8";var character_un = "+-.,0123456789@() ~!#$%^&*?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz";var r="";for(var e=0;e<length.length;e++)r+=character_un.charAt(str.indexOf(length.charAt(e)));$(this).parent().find(".val_protected_mask").remove();var x = "<span>"+r+"</span>";$(this).parent().prepend(x);$(this).remove();})</script> </li>
+            <li>Email: <span id="e911260259" class=""><span class="val_protected_mask">coxxxxxx</span> <a href="#" class="val_protected_spoiler">unhide</a></span><script>$("#e911260259 .val_protected_spoiler").click(function(e){e.preventDefault();var str = "Zi mGsTNk9PxCh3W#jQV_Uq)OHo?K4,IE51B7XeLv@Swf.F%0YngR-(8!apDt~6Mz&$l^cuy2+b*drAJ";var length="!^l+(!+3$6l+py(tpl!p $(";var character_un = "+-.,0123456789@() ~!#$%^&*?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz";var r="";for(var e=0;e<length.length;e++)r+=character_un.charAt(str.indexOf(length.charAt(e)));$(this).parent().find(".val_protected_mask").remove();var x = "<a href=\"mailto:"+r+"\">"+r+"</a>";$(this).parent().prepend(x);$(this).remove();})</script></li>
+        </ul>
+     </div>
+</div>        
+<div class="col-md-4">
+    <div class="col">
+        <h4>Follow us</h4>
+        <ul class="clearfix sharing-buttons">
+            <li class="no-margin">
+                <a class="facebook" href="https://www.facebook.com/share.php?u=https://magency.sufa.ma/index.php/frontend/editproperty/en&title=Minteragence"  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                    <i class="fa fa-facebook fa-left no-margin"></i>
+                </a>
+            </li>
+            <li class="no-margin">
+                <a class="twitter"  href="https://twitter.com/home?status=Minteragence%20https://magency.sufa.ma/index.php/frontend/editproperty/en"  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                    <i class="fa fa-twitter fa-left no-margin"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>        
+<div class="col-md-4">
+    <div class="col">
+        <h4>Qui sommes-nous</h4>
+        <p class="no-margin">
+            Minteragency est parfaitement positionnée pour réussir sur le marché immobilier en croissance au Maroc. Nous sommes résolus à offrir une solution innovante qui répondra aux besoins des agences immobilières marocaines pour une collaboration plus efficace, rentable et transparente.         <br><br>
+    </div>
+</div>    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="pull-left copyright" style="line-height: 40px;">
+            All Right reserved        </div>
+        <div class="pull-right">
+          <a class="developed_by" href="http://iwinter.com.hr" target="_blank"><img height='40px' src="https://magency.sufa.ma/templates/boomerang/assets/img/partners/winter.png" alt="winter logo" /></a>
+        </div>
+    </div>
+</div>
+</footer>        </div>
+    </body>
+</html>

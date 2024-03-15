@@ -1,0 +1,74 @@
+i[class^="fa"] {
+	display: inline-block;
+	width: 3ch;
+	aspect-ratio: 1;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.fa_door { background-image: url('svgs/door.svg'); }
+.fa_farming { background-image: url('svgs/farming.svg'); }
+.fa_sign-hanging { background-image: url('svgs/sign-hanging.svg'); }
+.fa_studio { background-image: url('svgs/studio.svg'); }
+.fa_desk { background-image: url('svgs/desk.svg'); }
+.fa_industry { background-image: url('svgs/industry.svg'); }
+.fa_shop { background-image: url('svgs/shop.svg'); }
+.fa_store { background-image: url('svgs/store.svg'); }
+.fa_warehouse { background-image: url('svgs/warehouse.svg'); }
+.fa_chalet { background-image: url('svgs/chalet.svg'); }
+.fa_caravan { background-image: url('svgs/caravan.svg'); }
+.fa_bungalow { background-image: url('svgs/bungalow.svg'); }
+.fa_villa { background-image: url('svgs/villa.svg'); }
+.fa_tent { background-image: url('svgs/tent.svg'); }
+.fa_mansion { background-image: url('svgs/mansion.svg'); }
+.fa_box { background-image: url('svgs/box.svg'); }
+.fa_soundproof { background-image: url('svgs/soundproof.svg'); }
+.fa_camera { background-image: url('svgs/camera.svg'); }
+.fa_chimney { background-image: url('svgs/Chimney.svg'); }
+.fa_library { background-image: url('svgs/library.svg'); }
+.fa_listcoin { background-image: url('svgs/listcoin.svg'); }
+.fa_bath { background-image: url('svgs/bath.svg'); }
+.fa_phone { background-image: url('svgs/phone.svg'); }
+.fa_cave { background-image: url('svgs/cave.svg'); }
+.fa_double_glazing { background-image: url('svgs/double_glazing.svg'); }
+.fa_double_orientation { background-image: url('svgs/double_orientation.svg'); }
+.fa_elevator { background-image: url('svgs/elevator.svg'); }
+.fa_equipped_kitchen { background-image: url('svgs/equipped_kitchen.svg'); }
+.fa_bullhorn { background-image: url('svgs/bullhorn.svg'); }
+.fa_date { background-image: url('svgs/date.svg'); }
+.fa_playground { background-image: url('svgs/playground.svg'); }
+.fa_guardian { background-image: url('svgs/guardian.svg'); }
+.fa_automation { background-image: url('svgs/automation.svg'); }
+.fa_gym { background-image: url('svgs/gym.svg'); }
+.fa_sofa { background-image: url('svgs/sofa.svg'); }
+.fa_price-per-meter { background-image: url('svgs/price-per-meter.svg'); }
+.fa_time { background-image: url('svgs/time.svg'); }
+.fa_garage { background-image: url('svgs/garage.svg'); }
+.fa_bed { background-image: url('svgs/bed.svg'); }
+.fa_parking { background-image: url('svgs/parking.svg'); }
+.fa_mail { background-image: url('svgs/mail.svg'); }
+.fa_pool { background-image: url('svgs/pool.svg'); }
+.fa_terasse { background-image: url('svgs/terasse.svg'); }
+.fa_balcony { background-image: url('svgs/balcony.svg'); }
+.fa_phone-white { background-image: url('svgs/phone-white.svg'); }
+.fa_sea_view { background-image: url('svgs/sea_view.svg'); }
+.fa_location { background-image: url('svgs/location.svg'); }
+.fa_category { background-image: url('svgs/category.svg'); }
+.fa_tree { background-image: url('svgs/tree.svg'); }
+.fa_thermalinsulation { background-image: url('svgs/thermalinsulation.svg'); }
+.fa_syndic { background-image: url('svgs/syndic.svg'); }
+.fa_surface { background-image: url('svgs/surface.svg'); }
+.fa_green_spaces { background-image: url('svgs/green_spaces.svg'); }
+.fa_sportterrains { background-image: url('svgs/sportterrains.svg'); }
+.fa_intercom { background-image: url('svgs/intercom.svg'); }
+.fa_stairs { background-image: url('svgs/stairs.svg'); }
+.fa_snowflake { background-image: url('svgs/snowflake.svg'); }
+.fa_image_upload { background-image: url('svgs/image_upload.svg'); }
+.fa_trash { background-image: url('svgs/trash.svg'); }
+.fa_land { background-image: url('svgs/land.svg'); }
+.fa_home { background-image: url('svgs/home.svg'); }
+.fa_hotel { background-image: url('svgs/hotel.svg'); }
+.fa_appartement { background-image: url('svgs/appartement.svg'); }
+.fa_cabin { background-image: url('svgs/cabin.svg'); }
+.fa_geolocation { background-image: url('svgs/geolocation.svg'); }
+.fa_search { background-image: url('svgs/search.svg'); }
