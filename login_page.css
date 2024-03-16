@@ -1,3 +1,12 @@
+.log_forms{
+	display: flex;
+	width: min(50ch, 100%);
+	background-color: var(--color-pure-light);
+	padding: var(--spacing-large);
+	margin: var(--spacing-normal) auto var(--spacing-large);
+	border-radius: var(--radius);
+	box-shadow: 0 5px 15px -10px gray;
+}
 .log_forms>form{
 	display:flex; 
 	align-items: center;
@@ -11,7 +20,7 @@
 	.log_forms._register>form:nth-child(1),
 	.log_forms:not(._register)>form:nth-child(2){
 		width:0px;
-		height: 35ch; overflow:hidden;
+		height: 30ch; overflow:hidden;
 		transition: width  var(--time-transition), opacity var(--time-transition-fast), visibility 0s var(--time-transition);
 		opacity: 0;
 		visibility: hidden;
@@ -44,7 +53,7 @@
 		background-color: var(--color-accent);
 		color: var(--color-light);
 	}
-	.log_forms button[type="submit"]:hover { animation: _bounce var(--time-transition); }
+	/* .log_forms button[type="submit"]:hover { animation: _bounce var(--time-transition); } */
 	.log_forms a { color: var(--color-gray); }
 	.log_forms label:has(input[name="captcha"]) {display:flex; align-items:center; gap: var(--spacing-normal)}
 

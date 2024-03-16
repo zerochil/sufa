@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic%7CRoboto:400,500,700%7CRaleway:400,500,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://magency.sufa.ma/templates/boomerang/assets/cache/42ba4big_css.css" media="all">
 
-<link rel="stylesheet" type="text/css" href="https://magency.sufa.ma/templates/boomerang/assets/css/styles_violet.css" media="screen" id="wpStylesheet"><link rel="stylesheet" type="text/css" href="" media="screen" id="template_style">
+<link rel="stylesheet" type="text/css" href="https://magency.sufa.ma/templates/boomerang/assets/css/styles_violet.css" media="screen" id="wpStylesheet"><link rel="stylesheet" type="text/css" href="#" media="screen" id="template_style">
   
 <!--[if lt IE 9]>
     <link rel="stylesheet" href="https://magency.sufa.ma/templates/boomerang/assets/boomerang/https://magency.sufa.ma/templates/boomerang/assets/sky-forms/css/sky-forms-ie8.css">
@@ -49,8 +49,6 @@
 		<link rel="stylesheet" type="text/css" href="form.css">
 
 		<link rel="stylesheet" type="text/css" href="footer.css">
-		<script src="utils.js" defer></script>
-		<script src="edit_listing.js" defer></script>
 
 	</head>
 	<body class="_body">
@@ -59,7 +57,7 @@
 			<!-- TODO: Delete all all the header; keep submit listing + login; but login will be added to navbar    -->
 			<!-- Note: the url here in PHP might be dynamic; don't just copy past  -->
 			<div class="submit_listing_button slide_up_in">
-				<a href="https://magency.sufa.ma/index.php/frontend/myproperties/en">
+				<a href="Edit_listing.html">
 					<svg class="svg-icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M511.20898437 709.75390625c-16.96289063 0-30.76171875-13.79882813-30.76171874-30.76171875V223.27929687L427.625 276.1015625c-12.04101563 12.04101563-31.46484375 12.04101563-43.50585938 0-12.04101563-12.04101563-12.04101563-31.46484375 0-43.50585938L489.41210937 127.30273437c12.04101563-12.04101563 31.46484375-12.04101563 43.50585938 1e-8l105.29296875 105.29296875c12.04101563 12.04101563 12.04101563 31.46484375 0 43.50585937-12.04101563 12.04101563-31.46484375 12.04101563-43.50585938 0L541.8828125 223.27929687V678.9921875c0.08789063 17.05078125-13.7109375 30.76171875-30.67382813 30.76171875z"  /><path d="M831.48242188 876.13085938H194.890625c-25.48828125 0-46.14257813-20.7421875-46.14257813-46.14257813V508.04492187c0-25.48828125 20.7421875-46.14257813 46.14257813-46.14257812h148.44726563c19.42382813 0 35.15625 15.73242188 35.15624999 35.15625s-15.73242188 35.15625-35.15625 35.15625H219.06054687v273.60351563H807.3125V532.21484375H680.83789063c-19.42382813 0-35.15625-15.73242188-35.15625001-35.15625s15.73242188-35.15625 35.15625-35.15625h150.55664063c25.48828125 0 46.14257813 20.7421875 46.14257813 46.14257813v321.94335937c0.08789063 25.48828125-20.65429688 46.14257813-46.0546875 46.14257813z m-1e-8-343.91601563z"  /></svg>
 					<span>Submit Listing</span> 
 				</a>
@@ -81,7 +79,7 @@
 		<div class="main_navigation_bar">
 				<div class="logo">
 					<!-- TODO: PHP: remove buttons that were here (handle navbar on mobile)  -->
-					<a class="" href="https://magency.sufa.ma/" title="Minteragence">
+					<a class="" href="#" title="Minteragence">
 						<img src="https://magency.sufa.ma/files/minteragencelogo (1).png" alt="Minteragence">
 					</a>
 				</div>
@@ -100,42 +98,44 @@
 					</div>
 					<div class="_scrollables">
 						<ul class="main_nav">
-							<li><a href="https://magency.sufa.ma/index.php/en/1/homepage" >Homepage</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/177/real_estate?search={%22v_search_option_79%22:%22Real%20estate%20-%20%22}" >Real estate</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/169/agents" >Agents</a></li>
-							<li class="active"><a href="https://magency.sufa.ma/index.php/en/182/groups" >Groups</a></li>
+							<li><a href="#" >Homepage</a></li>
+							<li><a href="#" >Real estate</a></li>
+							<li><a href="#" >Agents</a></li>
+							<li><a href="Groups.html" >Groups</a></li>
 							<li class="nav_trigger">
-								<a href="https://magency.sufa.ma/index.php/en/5/about_us">About us</a>
+								<a href="#">About us</a>
 								<span onclick="this.parentNode.classList.toggle('triggered'); this.closest('._scrollables').querySelector('.secondary_nav').classList.toggle('_collapsed')">+</span>
 							</li>
-							<li><a href="https://magency.sufa.ma/index.php/en/4/contact" >Contact</a></li>
+							<li><a href="#" >Contact</a></li>
 						</ul>
 						<ul class="secondary_nav"> <!-- TODO: remove JS that handle this submenu from PHP; -->
-							<li><a href="https://magency.sufa.ma/index.php/en/147/featured" >Featured</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/142/blog_page" >Blog page</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/143/custom_search" >Custom search</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/3/rent" >Rent</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/2/sale" >Sale</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/144/sale_and_rent" >Sale and Rent</a></li>
-							<li><a href="http://www.google.com"  target="_blank">Google link</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/157/articles" >Articles</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/160/showroom" >Showroom</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/161/ask_expert" >Ask Expert</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/173/treefield_sitemap" >Treefield sitemap</a></li>
-							<li><a href="https://magency.sufa.ma/index.php/en/181/demo_maps" >Demo maps</a></li>
+							<li><a href="#" >Featured</a></li>
+							<li><a href="#" >Blog page</a></li>
+							<li><a href="#" >Custom search</a></li>
+							<li><a href="#" >Rent</a></li>
+							<li><a href="#" >Sale</a></li>
+							<li><a href="#" >Sale and Rent</a></li>
+							<li><a href="#"  target="_blank">Google link</a></li>
+							<li><a href="#" >Articles</a></li>
+							<li><a href="#" >Showroom</a></li>
+							<li><a href="#" >Ask Expert</a></li>
+							<li><a href="#" >Treefield sitemap</a></li>
+							<li><a href="#" >Demo maps</a></li>
 						</ul>
 					</div>
 				</div>
 
-				<a class="_login" href="https://magency.sufa.ma/index.php/frontend/login/en">Login</a>
+				<a class="_login" href="Login.html">Login</a>
 
 	<!-- TODO: Why use dropmenu? just a single button to toggle the language as there are only two -->
-			<a href="https://magency.sufa.ma/index.php/fr/182" class="language_selection"><img src="https://magency.sufa.ma/templates/boomerang/assets/img/flags/fr.png" alt="" /></a>
+			<a href="#" class="language_selection"><img src="https://magency.sufa.ma/templates/boomerang/assets/img/flags/fr.png" alt="" /></a>
 		</div>
 	</header>
 
 	<!-- MAIN CONTENT -->
 
+		<script src="utils.js" defer></script>
+		<script src="edit_listing.js" defer></script>
 	<form class="multi_step_form _form" action="" method="post" accept-charset="utf-8">
 		<div class="form_content slider_container">
 			<fieldset class="_categories slider_child">

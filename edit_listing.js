@@ -5,20 +5,23 @@ let storedImages = [];
 // Category
 ( () => {
 	const selectors = document.querySelector('._selectors');
-	const children = selectors.nextElementSibling.children;
-	let prevIndex = 0;
+	const choices = selectors.nextElementSibling.children;
+	const inputs = Array.from(selectors.querySelectorAll('input'));
 
-	selectors.querySelectorAll('input').forEach( (element, index) => {
-		if (element.checked) {
-			prevIndex = index;
-			children[index].classList.add('_active');
-		}
-		element.addEventListener('click', () => {
-			children[prevIndex].classList.remove('_active');
-			children[index].classList.add('_active');
-			prevIndex = index;
-		});
+	const checkedIndex = inputs.findIndex(input => input.checked);
+	if ( checkedIndex !== -1 ) 
+		toggleGroupClass(choices[checkedIndex], '_active');
+	else {
+		toggleGroupClass(choices[0], '_active');
+		inputs[0].checked = true;
+	}
+
+	inputs.forEach( (element, index) => {
+		element.addEventListener('click', () => toggleGroupClass(choices[index], '_active') )
 	});
+	
+	Array.from
+
 })();
 
 
@@ -87,13 +90,6 @@ let storedImages = [];
 	let disabledButtons = toggleButtons(order, null);
 	form.append(container);
 
-	function toggleGroupClass(target, className) {
-		Array.from(target.parentNode.children).forEach(
-			element => element == target
-				? element.classList.add(className)
-				: element.classList.remove(className)
-		)
-	}
 
 	function switchClass(e1, e2, className) {
 		(Array.isArray(e1))
@@ -485,7 +481,7 @@ form.addEventListener( 'submit', (event) => {
 
 	// fetch(this.action, {
 	// 	method: 'POST',
-	// 	body: modifiedFormData
+	// 	body: data
 	// })
 
 })

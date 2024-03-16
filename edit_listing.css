@@ -282,7 +282,7 @@ label:has( i[class^="fa"]) {
 			border-radius: 66% 34% 25% 75% / 46% 56% 44% 54%;
 			right: -300px; bottom:-300px;
 			width: 1800px; height: 1800px;
-			rotate: 184deg;
+			rotate: 124deg;
 			/* transition: border .5s, right .2s, bottom .2s, rotate .6s, width .5s, height .5s; */
 		}
 		._form .form_submit.slider_selected *{

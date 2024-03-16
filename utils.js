@@ -59,3 +59,11 @@ function loadScript (url, callback) {
 	if (callback) script.onload = callback;
 	document.head.appendChild(script);
 }
+
+function toggleGroupClass(target, className) {
+	Array.from(target.parentNode.children).forEach(
+		element => element == target
+			? element.classList.add(className)
+			: element.classList.remove(className)
+	)
+}
