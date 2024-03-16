@@ -1,7 +1,6 @@
 ._form input[type="checkbox"], .multi_step_form input[type="radio"]{ display:none; }
 ._form{
 	display: flex;
-	margin: var(--spacing-large) auto;
 	background: var(--color-pure-light);
 	padding: var(--spacing-large);
 	border-radius: var(--radius);
@@ -9,6 +8,7 @@
 	color: var(--color-dark);
 	overflow: hidden;
 	box-shadow: 0 5px 15px -10px gray;
+	margin: var(--spacing-normal) auto var(--spacing-large);
 }
 	._form fieldset{
 		min-height: 45ch;
@@ -195,9 +195,10 @@
 				height: 1ch;
 				background-color: var(--color-gray);
 				border-radius: 2ch;
+				transition: color var(--time-transition-slow) var(--time-transition), width var(--time-transition-slow) var(--time-transition);
 			}
 			.nav_buttons .nav_indicator>._selected{
-				width: 2ch;
+				width: 3ch;
 				background-color: var(--color-accent);
 			}
 			@media screen and (max-width: 400px) {

@@ -146,6 +146,7 @@ label:has( i[class^="fa"]) {
 		border-radius: var(--radius);
 		font-weight: bold;
 		padding: 1ch 4ch;
+		cursor: pointer;
 	}
 
 .image_upload .upload_gallery{
