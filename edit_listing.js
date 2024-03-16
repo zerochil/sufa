@@ -118,7 +118,7 @@ let storedImages = [];
 		disabledButtons = toggleButtons(newOrder,  disabledButtons);
 		switchClass(indicator.children[order], indicator.children[newOrder], '_selected');
 		switchClass(fieldsets[order], fieldsets[newOrder], 'slider_selected');
-		// if (event.target == next) form.scrollIntoView(scrollBehavior);
+		if (event.target == next) form.scrollIntoView(scrollBehavior);
 		order = newOrder;
 	}
 
