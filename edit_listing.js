@@ -382,7 +382,7 @@ loadScript(
 		{
 			element: 'div',
 			class: '_dropzone',
-			events: {dragover: toggleDropzone, drop: handleNewImages},
+			events: { dragleave: toggleDropzone, dragover: toggleDropzone, drop: [  toggleDropzone,handleNewImages] },
 			ref: 'dropzone',
 			children: [
 				{
@@ -461,9 +461,11 @@ loadScript(
 	function toggleDropzone(event){
 		event.preventDefault();
 		if (event.type === 'dragover') {
-			dropzone.classList.add('drop-zoon--over');
+			dropzone.classList.add('dropzone_over');
 		} else if (event.type === 'dragleave') {
-			dropzone.classList.remove('drop-zoon--over');
+			dropzone.classList.remove('dropzone_over');
+		} else if (event.type === 'drop') {
+			dropzone.classList.remove('dropzone_over');
 		}
 	}
 })();

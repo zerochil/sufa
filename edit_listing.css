@@ -118,6 +118,9 @@ label:has( i[class^="fa"]) {
 	box-shadow:  0 0 1rem 1rem var(--color-lighter-gray);
 	margin-bottom: var(--spacing-normal);
 }
+	._dropzone.dropzone_over{
+		border-color: var(--color-accent);
+	}
 	._dropzone > label, ._dropzone > i {
 		margin: var(--spacing-normal) 0;
 	}
@@ -273,18 +276,16 @@ label:has( i[class^="fa"]) {
 		width: 0%; height: 0%;
 		right:calc( var(--spacing-large) * 2);
 		bottom:var(--spacing-medium);
-		rotate: 0deg;
 		border-radius: 41% 59% 46% 54% / 58% 57% 43% 42%;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0) 49%);
-		transition: border .5s, right .5s, bottom .5s, rotate .5s, width .5s, height .5s;
+		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 60%);
+		transition: border .5s, right .5s, bottom .5s, width .5s, height .5s;
 		will-change: border-radius, background-image;
 	}
 		._form:has( .form_submit.slider_selected>div>._active)::before {
 			border-radius: 66% 34% 25% 75% / 46% 56% 44% 54%;
 			right: -300px; bottom:-300px;
 			width: 1800px; height: 1800px;
-			rotate: 124deg;
-			/* transition: border .5s, right .2s, bottom .2s, rotate .6s, width .5s, height .5s; */
+			/* transition: border .5s, right .2s, bottom .2s, width .5s, height .5s; */
 		}
 		._form .form_submit.slider_selected *{
 			color:white;
