@@ -33,6 +33,8 @@ let storedImages = [];
 	// fieldsets[2].remove();
 	// fieldsets[3].remove();
 	fieldsets = form.querySelectorAll('fieldset');
+
+	const formTop = form.offsetTop - 10; // 10 of margin
 	let order = form.querySelector('.fieldset._selected') ?? 0;
 	fieldsets[order].classList.add('slider_selected');
 
@@ -118,7 +120,12 @@ let storedImages = [];
 		disabledButtons = toggleButtons(newOrder,  disabledButtons);
 		switchClass(indicator.children[order], indicator.children[newOrder], '_selected');
 		switchClass(fieldsets[order], fieldsets[newOrder], 'slider_selected');
-		if (event.target == next) form.scrollIntoView(scrollBehavior);
+		// if (newOrder > order) {
+			window.scrollTo({
+				top: formTop,
+				behavior: "smooth"
+			});
+		// }
 		order = newOrder;
 	}
 
